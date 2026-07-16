@@ -1,0 +1,32 @@
+{
+  "name": "vue-fdd-mvvm-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@phosphor-icons/vue": "^2.2.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "pinia": "^3.0.1",
+    "reka-ui": "^2.2.0",
+    "tailwind-merge": "^3.0.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/node": "^22.13.5",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "tailwindcss": "^4.0.9",
+    "tw-animate-css": "^1.2.4",
+    "typescript": "^5.7.3",
+    "vite": "^7.0.0",
+    "vue-tsc": "^2.2.4"
+  }
+}
