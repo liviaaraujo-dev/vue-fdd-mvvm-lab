@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vue-fdd-mvvm-lab:latest
+    container_name: vue-fdd-mvvm-lab
+    ports:
+      - "8080:80"
+    restart: unless-stopped

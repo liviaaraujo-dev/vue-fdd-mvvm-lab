@@ -23,6 +23,24 @@ npm run build      # type-check + build de produção
 npm run typecheck
 ```
 
+## Docker
+
+A aplicação é uma SPA estática. O `Dockerfile` usa build multi-stage: compila com Node e serve o resultado com Nginx (imagem final enxuta, sem `node_modules`). O Nginx já está configurado com fallback de SPA (`try_files … /index.html`) para o Vue Router funcionar em rotas diretas.
+
+```bash
+docker compose up --build   # http://localhost:8080
+docker compose down         # para e remove o container
+```
+
+Ou usando apenas o Docker:
+
+```bash
+docker build -t vue-fdd-mvvm-lab .
+docker run --rm -p 8080:80 vue-fdd-mvvm-lab
+```
+
+Arquivos: `Dockerfile` (build + serve), `nginx.conf` (config da SPA), `docker-compose.yml` (serviço `web` na porta `8080:80`) e `.dockerignore`.
+
 ## As duas arquiteturas, na prática
 
 ### FDD — organização por feature, não por tipo de arquivo
